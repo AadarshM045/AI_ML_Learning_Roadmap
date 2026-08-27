@@ -17,7 +17,7 @@ Includes **clean code**, **robust error handling**, and **interactive menu-drive
 
 | No. | Title | File Name | Description |
 |-----|-------|-----------|-------------|
-| 01 | Calculator | [01_Calculator.py](01_Calculator.py) | Menu-driven utility for arithmetic operations, squares, cubes, and roots.[cite: 1] |
+| 01 | Calculator | [01_Calculator.py](01_Python_Basics/01_Calculator.py) | Menu-driven utility for arithmetic operations, squares, cubes, and roots.[cite: 1] |
 | 02 | Number Guessing Game | [02_Number_Guessing_Game.py](02_Number_Guessing_Game.py) | Interactive game with custom difficulty levels and high/low hints.[cite: 2] |
 | 03 | Word Counter | [03_Word_Counter.py](03_Word_Counter.py) | Text analysis tool that counts characters, words, and sentences.[cite: 3] |
 | 04 | Temperature Converter | [04_Temperature_Converter.py](04_Temperature_Converter.py) | Converts temperatures across Celsius, Fahrenheit, and Kelvin.[cite: 4] |
