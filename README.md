@@ -15,7 +15,7 @@ Includes **clean code**, **robust error handling**, and **interactive menu-drive
 
 ## 🐍 Python Projects
  
-                     ## [Python Basics](./01_Python_Basics)
+## [Python Basics](./01_Python_Basics)
 
 | No. | Title | File Name | Description |
 |-----|-------|-----------|-------------|
