@@ -71,4 +71,4 @@ Includes **clean code**, **robust error handling**, and **interactive menu-drive
 - Each script includes:
   - **Clean, readable code** formatted using standardized Python conventions.
   - **Interactive command-line menus** powered by `while True` loops.
-  - **Try-except blocks** (`ValueError`, `ZeroDivisionError`, `Exception`) for robust error handling and input validation.
+  - **Try-except blocks** (`ValueError`, `ZeroDivisionError`, `Exception`) for robust error handling and input validation
