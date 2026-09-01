@@ -312,7 +312,7 @@ Please give this repository a ⭐ star on GitHub! It motivates further developme
 
 ## 📧 Questions or Feedback?
 
-Feel free to open an issue on GitHub or reach out to the author. Happy coding! 🚀
+Feel free to open an issue on GitHub or reach out to the author. Happy coding!
 
 ---
 
