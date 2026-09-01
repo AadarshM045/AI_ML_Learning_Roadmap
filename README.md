@@ -62,7 +62,8 @@ AI_ML_Learning_Roadmap/
 │   └── 05_Strings/
 │       ├── 01_Word_Counter.py
 │       ├── 02_Palindrome_Checker.py
-│       └── 03_Caesar_Cipher.py
+│       |── 03_Caesar_Cipher.py
+|       └── 04_Password_Strength_Checker.py
 ├── LICENSE
 └── README.md
 ```
@@ -134,6 +135,7 @@ Master string manipulation, text processing, and pattern recognition.
 | 01 | **Word Counter** | [`01_Word_Counter.py`](./Python/05_Strings/01_Word_Counter.py) | Text analysis tool that counts characters, words, sentences, and provides detailed statistics. |
 | 02 | **Palindrome Checker** | [`02_Palindrome_Checker.py`](./Python/05_Strings/02_Palindrome_Checker.py) | Check if words or phrases are palindromes (read the same forwards and backwards). |
 | 03 | **Caesar Cipher** | [`03_Caesar_Cipher.py`](./Python/05_Strings/03_Caesar_Cipher.py) | Encrypt and decrypt messages using the classic Caesar cipher algorithm with custom shift values. |
+| 03 | **Password Strength Checker** | [`04_Password_Strength_Checker.py`](./Python/05_Strings/04_Password_Strength_Checker.pyy) | Checks your password strength and tells you exactly how to improve it. | 
 
 ---
 
