@@ -143,6 +143,10 @@ Master string manipulation, text processing, and pattern recognition.
 
 ---
 
+## 06 - Files
+
+Master file I/O operations, text persistence, and data parsing to build persistent Python applications.
+
 📁 **Folder:** [`Python/06_Files`](./Python/06_Files)
 
 | # | Title | File | Description |
