@@ -20,6 +20,7 @@ A comprehensive collection of Python implementations covering **fundamental util
 - [03 - Functions](#03---functions)
 - [04 - Loops](#04---loops)
 - [05 - Strings](#05---strings)
+- [06 - Files](#06---files)
 - [Requirements](#requirements)
 - [How to Use](#how-to-use)
 - [License](#license)
@@ -60,10 +61,13 @@ AI_ML_Learning_Roadmap/
 │   │   ├── 02_FizzBuzz.py
 │   │   └── 03_Number_Guessing.py
 │   └── 05_Strings/
-│       ├── 01_Word_Counter.py
-│       ├── 02_Palindrome_Checker.py
-│       |── 03_Caesar_Cipher.py
-|       └── 04_Password_Strength_Checker.py
+│   |    ├── 01_Word_Counter.py
+│   |    ├── 02_Palindrome_Checker.py
+│   |    |── 03_Caesar_Cipher.py
+|   |    └── 04_Password_Strength_Checker.py
+│   └──  06_Files/
+│        ├── 01_Journal_App.py
+│        └── 02_Log_File_Analyzer.py
 ├── LICENSE
 └── README.md
 ```
@@ -136,6 +140,15 @@ Master string manipulation, text processing, and pattern recognition.
 | 02 | **Palindrome Checker** | [`02_Palindrome_Checker.py`](./Python/05_Strings/02_Palindrome_Checker.py) | Check if words or phrases are palindromes (read the same forwards and backwards). |
 | 03 | **Caesar Cipher** | [`03_Caesar_Cipher.py`](./Python/05_Strings/03_Caesar_Cipher.py) | Encrypt and decrypt messages using the classic Caesar cipher algorithm with custom shift values. |
 | 03 | **Password Strength Checker** | [`04_Password_Strength_Checker.py`](./Python/05_Strings/04_Password_Strength_Checker.pyy) | Checks your password strength and tells you exactly how to improve it. | 
+
+---
+
+📁 **Folder:** [`Python/06_Files`](./Python/06_Files)
+
+| # | Title | File | Description |
+|---|-------|------|-------------|
+| 01 | **Journal App** | [`01_Journal_App.py`](./Python/06_Files/01_Journal_App.py) | Interactive personal journal allowing users to write timestamped entries and review past thoughts. |
+| 02 | **Log File Analyzer** | [`02_Log_File_Analyzer.py`](./Python/06_Files/02_Log_File_Analyzer.py) | Automated tool that parses log files, categorizes messages by severity, and generates structured analysis reports. |
 
 ---
 
