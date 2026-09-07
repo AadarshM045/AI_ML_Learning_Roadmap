@@ -60,14 +60,23 @@ AI_ML_Learning_Roadmap/
 │   │   ├── 01_Multiplication_Table.py
 │   │   ├── 02_FizzBuzz.py
 │   │   └── 03_Number_Guessing.py
-│   └── 05_Strings/
+│   ├── 05_Strings/
 │   |    ├── 01_Word_Counter.py
 │   |    ├── 02_Palindrome_Checker.py
 │   |    |── 03_Caesar_Cipher.py
 |   |    └── 04_Password_Strength_Checker.py
-│   └──  06_Files/
-│        ├── 01_Journal_App.py
-│        └── 02_Log_File_Analyzer.py
+│   ├──  06_Files/
+│   |     ├── 01_Journal_App.py
+│   |     └── 02_Log_File_Analyzer.py
+│   ├──  07_Lists/
+│   |    ├── 01_To_Do_List.py
+│   |    ├── 02_Grade_Tracker.py
+│   |    └── 03_Shopping_List_Manager.py
+│   └── 08_Dictionaries_Tuples
+│        ├── 01_Contact_Book.py
+│        ├── 02_Word_Frequency_Counter.py
+│        └── 03_Simple_Inventory_System.py
+|       
 ├── LICENSE
 └── README.md
 ```
@@ -155,6 +164,34 @@ Master file I/O operations, text persistence, and data parsing to build persiste
 | 02 | **Log File Analyzer** | [`02_Log_File_Analyzer.py`](./Python/06_Files/02_Log_File_Analyzer.py) | Automated tool that parses log files, categorizes messages by severity, and generates structured analysis reports. |
 
 ---
+
+## 07 - Lists
+
+Learn to work with Python lists for storing, organizing, modifying, and managing collections of data.
+
+📁 **Folder:** [`Python/07_Lists`](./Python/07_Lists)
+
+| # | Title | File | Description |
+|---|-------|------|-------------|
+| 01 | **To-Do List** | [`01_To_Do_List.py`](./Python/07_Lists/01_To_Do_List.py) | Simple task management application that allows users to add, view, complete, and remove tasks using lists. |
+| 02 | **Grade Tracker** | [`02_Grade_Tracker.py`](./Python/07_Lists/02_Grade_Tracker.py) | Track and manage student grades using lists while calculating totals, averages, and performance results. |
+| 03 | **Shopping List Manager** | [`03_Shopping_List_Manager.py`](./Python/07_Lists/03_Shopping_List_Manager.py) | Interactive shopping list manager for adding, removing, viewing, and organizing items using list operations. |
+
+**---**
+
+**## 08 - Dictionaries & Tuples**
+
+Learn to store and organize structured data using Python dictionaries and tuples.
+
+📁 **Folder:** [`Python/08_Dictionaries_Tuples`](./Python/08_Dictionaries_Tuples)
+
+| # | Title | File | Description |
+|---|-------|------|-------------|
+| 01 | **Contact Book** | [`01_Contact_Book.py`](./Python/08_Dictionaries_Tuples/01_Contact_Book.py) | Contact management application that stores names and contact information using dictionary data structures. |
+| 02 | **Word Frequency Counter** | [`02_Word_Frequency_Counter.py`](./Python/08_Dictionaries_Tuples/02_Word_Frequency_Counter.py) | Analyze text by counting how frequently each word appears using dictionaries and key-value pairs. |
+| 03 | **Simple Inventory System** | [`03_Simple_Inventory_System.py`](./Python/08_Dictionaries_Tuples/03_Simple_Inventory_System.py) | Basic inventory management system for storing products, tracking quantities, and updating inventory using dictionaries. |
+
+**---**
 
 ## 💻 Requirements
 
