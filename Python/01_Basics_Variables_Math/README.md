@@ -2,17 +2,15 @@
 
 > First steps in Python: storing data in variables, doing arithmetic, and building interactive menu-driven programs.
 
-📁 **Folder:** [`Python/01_Basics_Variables_Math`](./Python/01_Basics_Variables_Math)
-
 ---
 
 ## 📂 Projects
 
 | # | Title | File | Description |
 |---|-------|------|-------------|
-| 01 | **Calculator** | [`01_Calculator.py`](./Python/01_Basics_Variables_Math/01_Calculator.py) | Menu-driven calculator supporting addition, subtraction, multiplication, division, square, cube, square root, cube root, and power — with division-by-zero protection. |
-| 02 | **Temperature Converter** | [`02_Temperature_Converter.py`](./Python/01_Basics_Variables_Math/02_Temperature_Converter.py) | Converts temperatures between Celsius, Fahrenheit, and Kelvin using dedicated conversion functions and a looping menu. |
-| 03 | **BMI Calculator** | [`03_BMI_Calculator.py`](./Python/01_Basics_Variables_Math/03_BMI_Calculator.py) | Calculates Body Mass Index from weight (kg) and height (m), then classifies the result as Underweight, Normal weight, Overweight, or Obese. |
+| 01 | **Calculator** | [`01_Calculator.py`](./01_Calculator.py) | Menu-driven calculator supporting addition, subtraction, multiplication, division, square, cube, square root, cube root, and power — with division-by-zero protection. |
+| 02 | **Temperature Converter** | [`02_Temperature_Converter.py`](./02_Temperature_Converter.py) | Converts temperatures between Celsius, Fahrenheit, and Kelvin using dedicated conversion functions and a looping menu. |
+| 03 | **BMI Calculator** | [`03_BMI_Calculator.py`](./03_BMI_Calculator.py) | Calculates Body Mass Index from weight (kg) and height (m), then classifies the result as Underweight, Normal weight, Overweight, or Obese. |
 
 ---
 
@@ -44,7 +42,6 @@ while True:
     choice = input("Enter your choice: ")
     if choice == "0":
         break
-    # ... handle each option
 
 # Division-by-zero guard
 if b == 0:
@@ -62,13 +59,13 @@ print(f"Your BMI is: {bmi:.2f}")
 
 ```bash
 # Calculator
-python3 Python/01_Basics_Variables_Math/01_Calculator.py
+python3 01_Calculator.py
 
 # Temperature Converter
-python3 Python/01_Basics_Variables_Math/02_Temperature_Converter.py
+python3 02_Temperature_Converter.py
 
 # BMI Calculator
-python3 Python/01_Basics_Variables_Math/03_BMI_Calculator.py
+python3 03_BMI_Calculator.py
 ```
 
 ---
