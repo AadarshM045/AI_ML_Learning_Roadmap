@@ -29,18 +29,18 @@ AI_ML_Learning_Roadmap/
 ### ✅ Phase 1 — Python Fundamentals
 > Variables, control flow, functions, loops, strings, file I/O, lists, dictionaries
 
-📂 [Go to Python →](./Python/README.md)
+📂 [Go to Python →](./01_Python/README.md)
 
 | Folder | Topics |
 |--------|--------|
-| [01 — Basics, Variables & Math](./Python/01_Basics_Variables_Math/README.md) | Variables, arithmetic, input, f-strings |
-| [02 — Conditionals](./Python/02_Conditionals/README.md) | `if/elif/else`, comparison operators, `random` |
-| [03 — Functions](./Python/03_Functions/README.md) | `def`, return values, `__name__ == "__main__"` |
-| [04 — Loops](./Python/04_Loops/README.md) | `for`, `while`, `break`, `continue` |
-| [05 — Strings](./Python/05_Strings/README.md) | String methods, slicing, `string` module |
-| [06 — Files](./Python/06_Files/README.md) | `open()`, read/write/append, `datetime` |
-| [07 — Lists](./Python/07_Lists/README.md) | `.append()`, `.pop()`, `enumerate()`, `sum()` |
-| [08 — Dictionaries & Tuples](./Python/08_Dictionaries_Tuples/README.md) | Nested dicts, `.items()`, `sorted()`, `max()` |
+| [01 — Basics, Variables & Math](./01_Python/01_Basics_Variables_Math/README.md) | Variables, arithmetic, input, f-strings |
+| [02 — Conditionals](./01_Python/02_Conditionals/README.md) | `if/elif/else`, comparison operators, `random` |
+| [03 — Functions](./01_Python/03_Functions/README.md) | `def`, return values, `__name__ == "__main__"` |
+| [04 — Loops](./01_Python/04_Loops/README.md) | `for`, `while`, `break`, `continue` |
+| [05 — Strings](./01_Python/05_Strings/README.md) | String methods, slicing, `string` module |
+| [06 — Files](./01_Python/06_Files/README.md) | `open()`, read/write/append, `datetime` |
+| [07 — Lists](./01_Python/07_Lists/README.md) | `.append()`, `.pop()`, `enumerate()`, `sum()` |
+| [08 — Dictionaries & Tuples](./01_Python/08_Dictionaries_Tuples/README.md) | Nested dicts, `.items()`, `sorted()`, `max()` |
 
 ---
 
