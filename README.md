@@ -17,6 +17,10 @@ AI_ML_Learning_Roadmap/
 │   ├── 06_Files/
 │   ├── 07_Lists/
 │   └── 08_Dictionaries_Tuples/
+├── 02_Api_Projects/ 
+│   └── 01_Weather/
+|       ├── main.py/
+|       └── README.md/
 ├── .gitignore
 ├── LICENSE
 └── README.md
