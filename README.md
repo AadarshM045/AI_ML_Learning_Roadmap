@@ -48,10 +48,8 @@ AI_ML_Learning_Roadmap/
 
 ---
 
-### 🔜 Phase 2 — Python Essentials *(before jumping to data science)*
-> Just the two topics needed before Phase 3 — skipping the rest for now and picking them up naturally along the way.
-- [ ] Comprehensions & Modules — list/dict comprehensions, how `import` works
-- [ ] OOP basics — picking up classes and objects naturally through NumPy and Pandas
+### 🔜 Phase 2 — Python Essentials
+
 
 ---
 
