@@ -1,290 +1,176 @@
-# 🌤️ Weather App
+# 01 — Weather App
 
-A beginner-friendly Python weather application that fetches **current weather information for any city** using the **OpenWeatherMap API**.
+> Fetches real-time weather for any city in the world — your first project using an API that requires a key.
 
-The project demonstrates how to work with **REST APIs, JSON data, API keys, query parameters, nested dictionaries, error handling, and user input** in Python.
+---
 
-## 🚀 Features
+## 📂 Files
 
-* 🌍 Search for weather by city name
-* 📍 Converts the city name into latitude and longitude using the **Geocoding API**
-* 🌤️ Fetches current weather using the **Current Weather API**
-* 🌡️ Displays temperature and feels-like temperature
-* 💧 Shows humidity
-* 🧭 Shows atmospheric pressure
-* 💨 Shows wind speed
-* ⚠️ Handles network, JSON, API-key, and invalid-location errors
-* 🔐 Keeps the API key in a separate file instead of hard-coding it
+| File | Purpose |
+|------|---------|
+| [`main.py`](./main.py) | Main program |
+| `api_openweathermap.txt` | Your API key — stored locally, never commit this to GitHub |
 
-## 🛠️ Technologies Used
+---
 
-* **Python**
-* **Requests** — for making HTTP requests
-* **JSON** — for handling API responses
-* **OpenWeatherMap API**
+## 🌐 APIs Used
 
-## 📁 Project Structure
+| | |
+|---|---|
+| **Provider** | [OpenWeatherMap](https://openweathermap.org/api) |
+| **API 1** | Geocoding API — converts a city name → latitude & longitude |
+| **API 2** | Current Weather API — fetches live weather for those coordinates |
+| **Auth** | API key required (free tier available) |
+| **Endpoint 1** | `http://api.openweathermap.org/geo/1.0/direct?q={city}&appid={key}` |
+| **Endpoint 2** | `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={key}` |
 
-```text
-Weather/
-├── weather_app.py
-├── api_openweathermap.txt
-└── README.md
+---
+
+## ✨ Features
+
+- Converts any city name to coordinates using the Geocoding API
+- Fetches live weather using those coordinates
+- Displays temperature, feels like, humidity, pressure, wind speed, and condition
+- Handles all errors gracefully — wrong city, empty key, no internet, bad JSON
+
+---
+
+## 🧠 What You'll Learn
+
+- Reading an API key from a local `.txt` file instead of hardcoding it
+- Two-step API workflow — geocode first, then fetch weather with the coordinates
+- Chained API calls — output of API 1 feeds into API 2
+- `isinstance()` — checking whether the API returned a list or a dict to detect errors
+- `.get(key, default)` — safely extracting fields from nested dicts without crashing
+- `weather_data.get("weather", [{}])[0]` — safely unpacking a nested list
+- `requests.RequestException` — one catch for all network errors
+- `exit()` — stopping the program cleanly at any failure point
+- Checking `weather_data.get("cod") != 200` for API-level errors
+- `encoding="utf-8-sig"` — handles the invisible BOM character some text editors add
+
+---
+
+## 💡 Key Concepts in Practice
+
+```python
+import requests
+
+# ── Load API key from file (never hardcode secrets) ───
+with open("api_openweathermap.txt", "r", encoding="utf-8-sig") as f:
+    YOUR_API_KEY = f.read().strip()
+
+# ── Step 1: Geocode city name → lat/lon ──────────────
+geo_url = (
+    f"http://api.openweathermap.org/geo/1.0/direct"
+    f"?q={Your_location}&limit=5&appid={YOUR_API_KEY}"
+)
+geo_data = requests.get(geo_url, timeout=10).json()
+
+# API returns a list on success, dict on error — check which one came back
+if isinstance(geo_data, dict):
+    print(f"API error: {geo_data.get('message')}")
+    exit()
+
+lat = geo_data[0]["lat"]      # take the first (best) match
+lon = geo_data[0]["lon"]
+
+# ── Step 2: Fetch weather using coordinates ───────────
+weather_url = (
+    f"https://api.openweathermap.org/data/2.5/weather"
+    f"?lat={lat}&lon={lon}&units=metric&appid={YOUR_API_KEY}"
+)
+weather_data = requests.get(weather_url, timeout=10).json()
+
+# cod=200 means success, anything else is an error
+if weather_data.get("cod") != 200:
+    print(f"Error: {weather_data.get('message')}")
+    exit()
+
+# ── Safely unpack nested response ────────────────────
+main_info    = weather_data.get("main", {})
+weather_info = weather_data.get("weather", [{}])[0]  # list → first item
+wind_info    = weather_data.get("wind", {})
+
+temperature = main_info.get("temp")        # .get() won't crash if key missing
+humidity    = main_info.get("humidity")
+condition   = weather_info.get("main", "Unknown")
+
+# ── Catch all network errors in one block ────────────
+try:
+    response = requests.get(url, timeout=10)
+except requests.RequestException as e:
+    print(f"Network error: {e}")
+    exit()
 ```
 
-> ⚠️ `api_openweathermap.txt` contains your private API key and should **never be uploaded to GitHub**.
+---
 
-## 🔑 API Key Setup
+## ▶️ How to Set Up & Run
 
-This project uses an API key from **OpenWeatherMap**.
+**1. Get a free API key**
+- Sign up at [openweathermap.org](https://openweathermap.org/api)
+- Go to your profile → API Keys → copy the key
 
-Create a file named:
+**2. Save the key to a file**
+```bash
+# Create the key file (do NOT commit this to GitHub)
+echo "your_api_key_here" > api_openweathermap.txt
+```
 
-```text
+**3. Add the key file to `.gitignore`**
+```
 api_openweathermap.txt
 ```
 
-Put your API key inside the file:
-
-```text
-YOUR_API_KEY_HERE
-```
-
-The program reads the key from this file before making API requests.
-
-### Important
-
-Add the API key file to `.gitignore`:
-
-```gitignore
-api_openweathermap.txt
-```
-
-Never commit or publicly share your API key.
-
-## 📦 Installation
-
-Make sure Python is installed, then install the `requests` library:
-
+**4. Install dependencies**
 ```bash
 pip install requests
 ```
 
-Or, if you are using a virtual environment:
-
+**5. Run the app**
 ```bash
-pip install requests
+python3 main.py
 ```
 
-## ▶️ How to Run
+---
 
-Run the Python file:
+## 🖥️ Sample Output
 
-```bash
-python weather_app.py
 ```
-
-Enter a city when prompted:
-
-```text
 Enter your location: Kathmandu
-```
-
-The program first searches for the location and then retrieves its current weather.
-
-## 💻 Example Output
-
-```text
-Enter your location: Kathmandu
-
 📍 Found: Kathmandu, NP (27.708317, 85.3205817)
 
 ========================================
 🌤️  Weather in Kathmandu, NP
 ========================================
   Condition   : Clouds (broken clouds)
-  Temperature : 24.5°C
-  Feels like  : 25.1°C
-  Humidity    : 72%
+  Temperature : 22°C
+  Feels like  : 21°C
+  Humidity    : 74%
   Pressure    : 1012 hPa
-  Wind speed  : 2.6 m/s
+  Wind speed  : 1.8 m/s
 ========================================
 ```
 
-*The values will change depending on the current weather.*
+---
 
-## 🔄 How It Works
+## ⚠️ Keep Your API Key Safe
 
-The application follows this workflow:
-
-```text
-User enters city
-       ↓
-Geocoding API
-       ↓
-City → Latitude & Longitude
-       ↓
-Current Weather API
-       ↓
-JSON Response
-       ↓
-Extract weather information
-       ↓
-Display results
-```
-
-### 1. Get the city name
-
-The user enters a location:
-
-```python
-Your_location = input("Enter your location: ").strip()
-```
-
-### 2. Geocode the location
-
-The OpenWeatherMap Geocoding API converts the city name into coordinates:
-
-```text
-Kathmandu → latitude + longitude
-```
-
-### 3. Fetch weather data
-
-Those coordinates are sent to the Current Weather API.
-
-The request uses:
-
-```text
-units=metric
-```
-
-so temperatures are displayed in **Celsius**.
-
-### 4. Parse JSON
-
-The API returns JSON containing nested data such as:
-
-```text
-main
-weather
-wind
-sys
-```
-
-The program extracts the required values from these sections.
-
-### 5. Display the weather
-
-The extracted information is formatted and displayed in the terminal.
-
-## 🧠 Concepts Learned
-
-This project helped practice several important Python and API concepts:
-
-* `requests.get()`
-* REST APIs
-* HTTP requests
-* Query parameters
-* API authentication
-* JSON responses
-* Lists and dictionaries
-* Nested dictionaries
-* `.get()` with default values
-* Exception handling
-* `try` / `except`
-* `RequestException`
-* `JSONDecodeError`
-* Reading files with `open()`
-* User input
-* String formatting
-* Working with external data
-
-## 🛡️ Error Handling
-
-The application handles several possible problems:
-
-### Missing API key file
-
-```text
-❌ API key file not found
-```
-
-### Empty API key
-
-```text
-❌ The API key file is empty.
-```
-
-### Network problems
-
-For example:
-
-* No internet connection
-* Timeout
-* DNS failure
-
-```text
-❌ Network error while fetching weather
-```
-
-### Invalid city
-
-```text
-❌ Could not find 'UnknownCity'
-```
-
-### Invalid JSON response
-
-```text
-❌ Weather API did not return valid JSON.
-```
-
-### API errors
-
-The program checks the API response code and displays the returned error message when necessary.
-
-## 📚 APIs Used
-
-### OpenWeatherMap Geocoding API
-
-Used to convert a location name into geographic coordinates.
-
-```text
-City → Latitude + Longitude
-```
-
-### OpenWeatherMap Current Weather API
-
-Used to retrieve current weather information based on latitude and longitude.
-
-```text
-Latitude + Longitude → Current Weather
-```
-
-## 🎯 Project Goal
-
-The goal of this project is not only to create a weather application, but also to learn how Python programs can communicate with **real-world APIs** and process the JSON data they return.
-
-This project is part of my **AI/ML learning journey**, where understanding APIs and external data sources is an important foundation for building future data and AI projects.
-
-## 🔮 Future Improvements
-
-Possible improvements for this project include:
-
-* 🌅 Add sunrise and sunset times
-* 🌧️ Add weather forecasts
-* 📅 Show hourly and daily forecasts
-* 🌎 Display more location information
-* 🎨 Build a graphical user interface
-* 📊 Store weather history
-* 🔄 Add automatic weather updates
-* 🗺️ Add weather information for multiple cities
+- **Never commit `api_openweathermap.txt` to GitHub** — add it to `.gitignore`
+- If you accidentally push it, regenerate your key immediately on OpenWeatherMap
 
 ---
 
-### 📌 Project Status
+## 🔗 How This Project Uses Previous Skills
 
-**Completed ✅**
+| Skill | Where it appears |
+|-------|-----------------|
+| File I/O | Reading the API key from a `.txt` file |
+| Dictionaries | Unpacking the entire API response |
+| `try/except` | Network errors, file not found, empty key |
+| f-strings | Building API URLs and formatting output |
+| Functions (next step) | Currently all inline — good refactor exercise |
 
-Built as part of my **Python → APIs & JSON** learning journey.
+---
+
+*Part of the [AI/ML Learning Roadmap](../../../README.md)*
