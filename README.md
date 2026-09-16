@@ -106,4 +106,4 @@ python3 Python/01_Basics_Variables_Math/01_Calculator.py
 
 ## 📄 License
 
-This project is licensed under the terms in the [LICENSE](./LICENSE) file.
+This project is licensed under the terms in the [LICENSE](./LICENSE) 

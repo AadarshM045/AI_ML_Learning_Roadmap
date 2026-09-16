@@ -37,7 +37,7 @@ if not Your_location:
 # ------------------------------------------------------------
 # STEP 3: Geocode the city name → get latitude & longitude
 # The Geocoding API converts a place name like "Kathmandu"
-# into coordinates like lat=28.65, lon=77.22
+# into coordinates like lat=27.708317, lon=85.3205817
 # ------------------------------------------------------------
 geo_url = (
     f"http://api.openweathermap.org/geo/1.0/direct"

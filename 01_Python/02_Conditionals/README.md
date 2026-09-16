@@ -2,16 +2,14 @@
 
 > Teaching your program to make decisions with `if`, `elif`, and `else` — plus your first taste of input validation and the `random` module.
 
-📁 **Folder:** [`Python/02_Conditionals`](./Python/02_Conditionals)
-
 ---
 
 ## 📂 Projects
 
 | # | Title | File | Description |
 |---|-------|------|-------------|
-| 01 | **Number Guessing Game** | [`01_Number_Guessing_Game.py`](./Python/02_Conditionals/01_Number_Guessing_Game.py) | Player sets the difficulty by choosing a number range — the computer picks a random number within it, then gives "Too high" / "Too low" hints until the player guesses correctly. Fully validates all inputs. |
-| 02 | **Grade Calculator** | [`02_Grade_Calculator.py`](./02_Conditionals/02_Grade_Calculator.py) | Takes a percentage score (0–100) and maps it to a letter grade (A / B / C / D / F) using a chain of `elif` conditions, with a guard for negative inputs. |
+| 01 | **Number Guessing Game** | [`01_Number_Guessing_Game.py`](./01_Number_Guessing_Game.py) | Player sets the difficulty by choosing a number range — the computer picks a random number within it, then gives "Too high" / "Too low" hints until the player guesses correctly. Fully validates all inputs. |
+| 02 | **Grade Calculator** | [`02_Grade_Calculator.py`](./02_Grade_Calculator.py) | Takes a percentage score (0–100) and maps it to a letter grade (A / B / C / D / F) using a chain of `elif` conditions, with a guard for negative inputs. |
 
 ---
 
@@ -81,10 +79,10 @@ else:
 
 ```bash
 # Number Guessing Game
-python3 Python/02_Conditionals/01_Number_Guessing_Game.py
+python3 01_Number_Guessing_Game.py
 
 # Grade Calculator
-python3 Python/02_Conditionals/02_Grade_Calculator.py
+python3 02_Grade_Calculator.py
 ```
 
 ---
