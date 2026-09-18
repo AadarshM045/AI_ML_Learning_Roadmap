@@ -15,7 +15,7 @@ from datetime import datetime  # built-in — gives us current date and time
 # ── Where the journal lives on disk ───────────────────────────────────────────
 # Written in ALL_CAPS = constant, this value never changes
 # Every function uses this variable so we only define the filename once
-JOURNAL_FILE = "journal.json"
+JOURNAL_FILE = "/home/aadarsh/Desktop/Github/AI_ML_Learning_Roadmap/02_Api_Projects/02_mood_journal/journal.json"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
