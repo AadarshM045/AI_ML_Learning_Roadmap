@@ -25,7 +25,7 @@ AI_ML_Learning_Roadmap/
 │       ├── mood_journal.py
 │       └── README.md
 ├── 03_web_scraping/
-├── 04_Numpy/                         🔄 On 
+├── 04_Numpy/                         🔄 On progress
 │   ├── phase-1.ipynb
 │   ├── phase-2.ipynb
 │   └── phase-3.ipynb
