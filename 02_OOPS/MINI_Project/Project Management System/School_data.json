@@ -1,0 +1,160 @@
+{
+    "Students": [
+        {
+            "name": "Aadarsh Mishra",
+            "age": 19,
+            "email": "aadarsh@gmail.com",
+            "roll_no": "101",
+            "grades": {
+                "Python": 85.0,
+                "Mathematics": 92.0,
+                "Physics": 78.0,
+                "Chemistry": 88.0,
+                "English": 81.0
+            }
+        },
+        {
+            "name": "Ram Sharma",
+            "age": 20,
+            "email": "ram.sharma@gmail.com",
+            "roll_no": "102",
+            "grades": {
+                "Python": 76.0,
+                "Mathematics": 84.0,
+                "Physics": 69.0,
+                "Chemistry": 80.0,
+                "English": 74.0
+            }
+        },
+        {
+            "name": "Sita Thapa",
+            "age": 18,
+            "email": "sita.thapa@gmail.com",
+            "roll_no": "103",
+            "grades": {
+                "Python": 95.0,
+                "Mathematics": 89.0,
+                "Physics": 91.0,
+                "Chemistry": 94.0,
+                "English": 87.0
+            }
+        },
+        {
+            "name": "Hari Adhikari",
+            "age": 21,
+            "email": "hari.adhikari@gmail.com",
+            "roll_no": "104",
+            "grades": {
+                "Python": 55.0,
+                "Mathematics": 62.0,
+                "Physics": 48.0,
+                "Chemistry": 67.0,
+                "English": 59.0
+            }
+        },
+        {
+            "name": "Priya Kumari",
+            "age": 19,
+            "email": "priya.kumari@gmail.com",
+            "roll_no": "105",
+            "grades": {
+                "Python": 88.0,
+                "Mathematics": 93.0,
+                "Physics": 86.0,
+                "Chemistry": 90.0,
+                "English": 92.0
+            }
+        },
+        {
+            "name": "Rohan Gupta",
+            "age": 20,
+            "email": "rohan.gupta@gmail.com",
+            "roll_no": "106",
+            "grades": {
+                "Python": 72.0,
+                "Mathematics": 68.0,
+                "Physics": 75.0,
+                "Chemistry": 71.0,
+                "English": 80.0
+            }
+        },
+        {
+            "name": "Anisha Karki",
+            "age": 18,
+            "email": "anisha.karki@gmail.com",
+            "roll_no": "107",
+            "grades": {
+                "Python": 98.0,
+                "Mathematics": 96.0,
+                "Physics": 94.0,
+                "Chemistry": 97.0,
+                "English": 91.0
+            }
+        },
+        {
+            "name": "Suman Yadav",
+            "age": 22,
+            "email": "suman.yadav@gmail.com",
+            "roll_no": "108",
+            "grades": {
+                "Python": 64.0,
+                "Mathematics": 58.0,
+                "Physics": 61.0,
+                "Chemistry": 70.0,
+                "English": 66.0
+            }
+        },
+        {
+            "name": "Nisha Shah",
+            "age": 19,
+            "email": "nisha.shah@gmail.com",
+            "roll_no": "109",
+            "grades": {}
+        },
+        {
+            "name": "Bikash Chaudhary",
+            "age": 21,
+            "email": "bikash.chaudhary@gmail.com",
+            "roll_no": "110",
+            "grades": {
+                "Python": 81.0,
+                "Mathematics": 77.0,
+                "Physics": 83.0,
+                "Chemistry": 79.0,
+                "English": 85.0
+            }
+        }
+    ],
+    "Teacher": [
+        {
+            "name": "Suresh Thapa",
+            "age": 35,
+            "email": "suresh.thapa@gmail.com",
+            "emp_id": "T001"
+        },
+        {
+            "name": "Anita Sharma",
+            "age": 32,
+            "email": "anita.sharma@gmail.com",
+            "emp_id": "T002"
+        },
+        {
+            "name": "Ramesh Yadav",
+            "age": 41,
+            "email": "ramesh.yadav@gmail.com",
+            "emp_id": "T003"
+        },
+        {
+            "name": "Sunita Gupta",
+            "age": 29,
+            "email": "sunita.gupta@gmail.com",
+            "emp_id": "T004"
+        },
+        {
+            "name": "Prakash Adhikari",
+            "age": 38,
+            "email": "prakash.adhikari@gmail.com",
+            "emp_id": "T005"
+        }
+    ]
+}
