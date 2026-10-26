@@ -1,3 +1,4 @@
+#pyright: reportMissingImports=false
 """
 EduManage - School Management System (Streamlit)
 
