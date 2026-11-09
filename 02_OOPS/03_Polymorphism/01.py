@@ -1,3 +1,7 @@
+# =====================================================================
+# POLYMORPHISM (Same method name in different, independent classes)
+# =====================================================================
+
 class Animal:
     def speak(self):
         print("Animals dont speak")
@@ -8,8 +12,9 @@ class Humans:
         print("Humans Do speak")
 
 
+# --- Testing the Code ---
 obj1 = Animal()
-obj2 = Humans()
+obj1.speak()  # Output: Animals dont speak
 
-obj1.speak()
-obj2.speak()
+obj2 = Humans()
+obj2.speak()  # Output: Humans Do speak
